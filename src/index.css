@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::-webkit-scrollbar {
+  appearance: none;
+}
+
+select {
+  appearance: none;
+}
+
+#StickyCategories::-webkit-scrollbar {
+  display: none;
+}
+
+.home__wrapper {
+  background: linear-gradient(
+    to right,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c7f 21%,
+    #f99185 52%,
+    #cf556c 78%,
+    #b12a5b 100%
+  );
+}
+
+#StickyCategories ::-webkit-scrollbar {
+  display: none;
+}
+
+.activeCategory {
+  background: blue !important;
+  color: white;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #82f238;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.headerRes {
+  background: #00b4db;
+  background: -webkit-linear-gradient(to top, #0083b0, #00b4db);
+  background: linear-gradient(to top, #0083b0, #00b4db);
+}
+
+.subcategory {
+  background: #457fca;
+  background: -webkit-linear-gradient(to right, #5691c8, #457fca);
+  background: linear-gradient(to right, #5691c8, #457fca);
+}
