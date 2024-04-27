@@ -81,7 +81,7 @@ const CategoryDetail = (): JSX.Element => {
               offset={-120}
               spy={true}
               activeClass="activeCategory"
-              className={`subcategory text-white py-2 px-4 rounded cursor-pointer`}
+              className={`bg-white border-2 border-red-400 py-2 px-4 rounded-full cursor-pointer`}
             >
               <pre className="font-sans">{category?.name}</pre>
             </Link>
@@ -121,7 +121,11 @@ const CategoryDetail = (): JSX.Element => {
                           }`}
                         >
                           {food?.image_urls.length ? (
-                            <div className={`${col ? "w-full" : "w-1/2"}`}>
+                            <div
+                              className={`${
+                                col ? "w-full" : "w-2/5 py-2 pl-2"
+                              }`}
+                            >
                               <ImgSwiper col={col} imgArr={food?.image_urls} />
                             </div>
                           ) : (
@@ -135,30 +139,30 @@ const CategoryDetail = (): JSX.Element => {
                             />
                           )}
 
-                          <div className="p-3">
+                          <div className="p-4">
                             <p className="text-xl w-full font-semibold">
                               {food?.name.trim()}
                             </p>
-                            <p className={`${col ? "block" : "hidden"}`}>
+                            <p className={`${col ? "block mt-3" : "hidden"}`}>
                               {food?.description.trim()}
                             </p>
                             <div
                               className={`flex justify-between  ${
                                 col
-                                  ? " flex-row"
-                                  : " flex-col gap-y-2 items-start"
+                                  ? " flex-row mt-4"
+                                  : " flex-col-reverse mt-2 gap-y-8 items-start"
                               }`}
                             >
-                              <p className="text-[19px] font-semibold">
+                              <p className="text-[16px] font-semibold bg-red-500 text-white py-1 px-2 rounded">
                                 {Number(food?.price).toLocaleString()} so'm
                               </p>
                               <p
-                                className={`inline-block py-[2px] px-3 rounded text-white ${
+                                className={`inline-block py-[2px] px-3 rounded  border-[1px] ${
                                   food?.food_status === "available"
-                                    ? "bg-green-500"
+                                    ? "border-green-500 text-green-500"
                                     : food?.food_status === "preparing"
-                                    ? "bg-yellow-500"
-                                    : "bg-red-500"
+                                    ? "border-yellow-500 text-yellow-500"
+                                    : "border-red-500 text-red-500"
                                 }`}
                               >
                                 {foodStatus[food?.food_status][getLangugage]}

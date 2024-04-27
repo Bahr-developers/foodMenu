@@ -16,11 +16,9 @@ const HamburgerMenu: FC<menuTypes> = ({ openMenu, setOpenMenu }) => {
     (item: ItemType2) => item.id === id
   );
 
-  console.log(restaurantById);
-
   return (
     <div
-      className={`fixed top-0 z-30 left-0 bg-white min-h-screen  transition-w  ease-in-out  duration-700  h-[100vh]  ${
+      className={`fixed top-0 z-30 left-0 hamburgerBg min-h-screen  transition-w  ease-in-out  duration-700  h-[100vh]  ${
         openMenu
           ? " w-[100%] ml-0 h-[100vh] opacity-100"
           : " w-[100%] ml-[-600px] opacity-0   pointer-events-none"

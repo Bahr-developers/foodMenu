@@ -15,9 +15,9 @@ const Header = (props: HeaderProps): JSX.Element => {
   return (
     <>
       <header className="max-w-md mx-auto z-10 sticky top-0 bg-white left-0">
-        <div className="headerRes flex items-center justify-between px-5 py-4 ">
+        <div className="bg-red-500 flex items-center justify-between px-5 py-4 ">
           <button
-            className="flex items-center justify-center p-1 rounded bg-gray-100  hover:bg-gray-200 focus:outline-none  focus:ring-gray-300"
+            className="flex items-center justify-center p-1 rounded bg-white focus:outline-none  focus:ring-[#ebc671]"
             onClick={() => setOpenMenu(true)}
           >
             <IoMenu size={30} className="text-gray-600" />

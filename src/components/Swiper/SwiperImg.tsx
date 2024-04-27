@@ -30,7 +30,7 @@ export default (props: SwiperPropsType) => {
               src={`${ImageBaseUrl}${img}`}
               alt={`Slide ${index}`}
               className={` ${
-                props.col ? " rounded-t-[10px]" : " rounded-l-[10px]"
+                props.col ? " rounded-t-[10px]" : " rounded-[10px]"
               }  h-full w-full`}
               style={{ height: props.col ? "260px" : "140px" }}
               height={props.col ? 260 : 140}

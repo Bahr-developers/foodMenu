@@ -31,7 +31,7 @@ select {
 }
 
 .activeCategory {
-  background: blue !important;
+  background: #ef4444 !important;
   color: white;
 }
 
@@ -44,13 +44,19 @@ select {
 }
 
 .headerRes {
-  background: #00b4db;
-  background: -webkit-linear-gradient(to top, #0083b0, #00b4db);
-  background: linear-gradient(to top, #0083b0, #00b4db);
+  background-color: #ebc671;
 }
 
 .subcategory {
   background: #457fca;
   background: -webkit-linear-gradient(to right, #5691c8, #457fca);
   background: linear-gradient(to right, #5691c8, #457fca);
+}
+
+.hamburgerBg {
+  background: radial-gradient(
+    circle at 10% 100%,
+    rgb(238, 56, 56) 100%,
+    rgba(206, 21, 0, 0.92) 100%
+  );
 }

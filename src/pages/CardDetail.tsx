@@ -15,6 +15,9 @@ import Loading from "../components/Loading/Loading";
 // interfaces
 import { CategoryType2, ItemType2 } from "../interfaces";
 
+// icons
+import { MdArrowRightAlt } from "react-icons/md";
+
 const CardDetail = (): JSX.Element => {
   const { id } = useParams<{ id: string }>();
 
@@ -37,16 +40,24 @@ const CardDetail = (): JSX.Element => {
               <Link
                 to={`/${id}/${category.id.toLowerCase()}`}
                 key={category?.id}
-                className="mx-5 border  mb-4 rounded-[10px] hover:shadow-md duration-150"
+                className="mx-5 border p-2   mb-4 rounded-[10px] hover:shadow-md duration-150 group"
               >
                 <LazyLoadImage
                   src={`${ImageBaseUrl}${category.image_url}`}
                   alt={category?.name}
-                  className="rounded-t-[10px] w-full h-full"
-                  height={280}
+                  className="rounded-t-[10px] w-[600px]  h-[180px]"
+                  height={180}
                   effect="blur"
                 />
-                <h3 className="text-2xl py-2 pl-2">{category?.name.trim()}</h3>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-2xl">{category?.name.trim()}</h3>
+                  <div className="flex items-center gap-1 duration-150 group-hover:text-red-400 group-hover:gap-2">
+                    <span>view more</span>
+                    <span>
+                      <MdArrowRightAlt size={22} />
+                    </span>
+                  </div>
+                </div>
               </Link>
             ))}
         </div>
