@@ -40,10 +40,12 @@ const HamburgerMenu: FC<menuTypes> = ({ openMenu, setOpenMenu }) => {
               effect="blur"
               className="w-[100px]"
             />
-            <p className="text-2xl p-0 mt-3">{restaurantById?.name}</p>
+            <p className="text-2xl p-0 mt-3 text-white">
+              {restaurantById?.name}
+            </p>
           </div>
-          <p className="my-3">{restaurantById?.description}</p>
-          <div className="flex items-center gap-2">
+          <p className="my-3 text-white">{restaurantById?.description}</p>
+          <div className="flex items-center gap-2 text-white">
             <span>
               <ImLocation2 size={20} />
             </span>
@@ -51,11 +53,11 @@ const HamburgerMenu: FC<menuTypes> = ({ openMenu, setOpenMenu }) => {
           </div>
         </div>
         <div className="pt-4  mb-3 flex items-center gap-2">
-          <span>Ishlab chiquvchilar:</span>
+          <span className="text-white">Ishlab chiquvchilar:</span>
           <Link
             to={"http://bahrtech.uz/"}
             target="_blank"
-            className="text-blue-500"
+            className="text-blue-200 underline"
           >
             BahrTech
           </Link>
@@ -63,7 +65,7 @@ const HamburgerMenu: FC<menuTypes> = ({ openMenu, setOpenMenu }) => {
         <Link
           to="https://t.me/Sulaymonov_D"
           target="_blank"
-          className="text-blue-500"
+          className="text-blue-200 underline"
         >
           @foodMenu_admin
         </Link>
