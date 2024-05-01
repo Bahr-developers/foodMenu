@@ -1,12 +1,7 @@
 import { useState } from "react";
 import { useLanguage } from "../query/queryKey";
 import { useQueryClient } from "@tanstack/react-query";
-
-interface LanguageType {
-  code: string;
-  title: string;
-  _id: string;
-}
+import { LanguageType } from "../interfaces";
 
 const SelectLanguage = () => {
   const queryClient = useQueryClient();

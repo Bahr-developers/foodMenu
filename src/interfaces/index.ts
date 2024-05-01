@@ -70,3 +70,9 @@ export interface menuTypes {
   openMenu: boolean;
   setOpenMenu: (open: boolean) => void;
 }
+
+export interface LanguageType {
+  code: string;
+  title: string;
+  _id: string;
+}

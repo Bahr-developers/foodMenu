@@ -18,8 +18,17 @@ import { CategoryType2, ItemType2 } from "../interfaces";
 // icons
 import { MdArrowRightAlt } from "react-icons/md";
 
+const viewMore = {
+  uz: "ko'proq ko'rish",
+  ru: "посмотреть больше",
+  en: "view more",
+};
+
 const CardDetail = (): JSX.Element => {
   const { id } = useParams<{ id: string }>();
+
+  // get language
+  const language: string = localStorage.getItem("language") || "uz";
 
   const getRestaurant = useRestaurant();
   const categories = useCategory(id);
@@ -52,7 +61,7 @@ const CardDetail = (): JSX.Element => {
                 <div className="flex items-center justify-between">
                   <h3 className="text-2xl">{category?.name.trim()}</h3>
                   <div className="flex items-center gap-1 duration-150 group-hover:text-red-400 group-hover:gap-2">
-                    <span>view more</span>
+                    <span>{viewMore[language as keyof typeof viewMore]}</span>
                     <span>
                       <MdArrowRightAlt size={22} />
                     </span>
