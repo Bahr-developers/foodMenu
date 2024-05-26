@@ -1,4 +1,6 @@
 import Categories from "./Categories";
+import FoodCardCol from "./FoodCardCol";
+import FoodCardrow from "./FoodCardrow";
 import HamburgerMenu from "./HamburgerMenu";
 import Header from "./Header";
 import HeaderMenu from "./HeaderMenu";
@@ -12,4 +14,6 @@ export {
   Categories,
   HamburgerMenu,
   ImgSwiper,
+  FoodCardCol,
+  FoodCardrow,
 };

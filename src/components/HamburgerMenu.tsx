@@ -37,6 +37,7 @@ const HamburgerMenu: FC<menuTypes> = ({ openMenu, setOpenMenu }) => {
               alt="restaurant img"
               src={`${ImageBaseUrl}${restaurantById?.image_url}`}
               height={100}
+              width={100}
               effect="blur"
               className="w-[100px]"
             />

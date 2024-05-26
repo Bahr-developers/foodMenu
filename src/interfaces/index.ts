@@ -76,3 +76,14 @@ export interface LanguageType {
   title: string;
   _id: string;
 }
+
+export interface FoodCardPropsType {
+  food: FoodType;
+  col: boolean;
+  restaurantImg: string;
+}
+
+export interface MainCategoryType {
+  category: CategoryType2;
+  restaurantId: string | undefined;
+}
