@@ -26,7 +26,7 @@ export const useCategory = function (id: string | undefined) {
   return useQuery({
     queryKey: [QUERY__KEY.category],
     queryFn: async () =>
-      await customAxios.get(`category/find/by/restaurant/${id}`, {
+      await customAxios.get(`category/find/all/${id}`, {
         headers: {
           "accept-language": localStorage.getItem("language"),
         },

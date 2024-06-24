@@ -16,7 +16,7 @@ const CardDetail = (): JSX.Element => {
   const { id } = useParams<{ id: string }>();
 
   const getRestaurant = useRestaurant();
-  const categories = useCategory(id);
+  const categories = useCategory(id);  
 
   if (getRestaurant.isLoading || categories.isLoading) return <Loading />;
 
@@ -31,7 +31,7 @@ const CardDetail = (): JSX.Element => {
         <div className="categories grid grid-cols-1">
           {categories?.data &&
             categories.data.data.map((category: CategoryType2) => (
-              <MainCategory category={category} restaurantId={id} />
+              <MainCategory key={category.id} category={category} restaurantId={id} />
             ))}
         </div>
       </div>

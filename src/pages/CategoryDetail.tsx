@@ -28,6 +28,7 @@ const CategoryDetail = (): JSX.Element => {
   const [col, setCol] = useState<boolean>(false);
 
   const { id, categoryId } = useParams<{ id: string; categoryId: string }>();
+  
 
   const categories = useCategory(id);
   const getRestaurant = useRestaurant();
