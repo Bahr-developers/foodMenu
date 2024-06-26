@@ -14,9 +14,12 @@ import MainCategory from "../components/mainCategory";
 
 const CardDetail = (): JSX.Element => {
   const { id } = useParams<{ id: string }>();
+  
 
   const getRestaurant = useRestaurant();
   const categories = useCategory(id);  
+  console.log(categories?.data);
+  
 
   if (getRestaurant.isLoading || categories.isLoading) return <Loading />;
 
