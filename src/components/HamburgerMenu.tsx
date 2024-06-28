@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { CgClose } from "react-icons/cg";
 import { Link, useParams } from "react-router-dom";
-import { ItemType2, menuTypes } from "../interfaces";
+import {menuTypes } from "../interfaces";
 import { useRestaurant } from "../query";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ImageBaseUrl } from "../constants/BASE_URL";
@@ -10,11 +10,9 @@ import { ImLocation2 } from "react-icons/im";
 const HamburgerMenu: FC<menuTypes> = ({ openMenu, setOpenMenu }) => {
   const { id } = useParams<{ id: string }>();
 
-  const getRestaurant = useRestaurant();
+  const getRestaurant = useRestaurant(id);
 
-  const restaurantById = getRestaurant.data?.data.find(
-    (item: ItemType2) => item.id === id
-  );
+  const restaurantById = getRestaurant.data?.data
 
   return (
     <div

@@ -7,7 +7,7 @@ import { useCategory, useRestaurant } from "../query";
 import Loading from "../components/Loading/Loading";
 
 // interfaces
-import { CategoryType2, ItemType2 } from "../interfaces";
+import { CategoryType2} from "../interfaces";
 
 // icons
 import MainCategory from "../components/mainCategory";
@@ -16,16 +16,16 @@ const CardDetail = (): JSX.Element => {
   const { id } = useParams<{ id: string }>();
   
 
-  const getRestaurant = useRestaurant();
+  const getRestaurant = useRestaurant(id);
+  console.log(getRestaurant.data?.data);
+  
   const categories = useCategory(id);  
   console.log(categories?.data);
   
 
   if (getRestaurant.isLoading || categories.isLoading) return <Loading />;
 
-  const restaurantById = getRestaurant.data?.data.find(
-    (item: ItemType2) => item.id === id
-  );
+  const restaurantById = getRestaurant.data?.data
 
   return (
     <section>

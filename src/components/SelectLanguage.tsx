@@ -2,11 +2,13 @@ import { useState } from "react";
 import { useLanguage } from "../query/queryKey";
 import { useQueryClient } from "@tanstack/react-query";
 import { LanguageType } from "../interfaces";
+import { useParams } from "react-router-dom";
 
 const SelectLanguage = () => {
   const queryClient = useQueryClient();
+  const {id} =  useParams()
 
-  const language2 = useLanguage();
+  const language2 = useLanguage(id);
 
   const [language, setLanguage] = useState(() => {
     const storedLanguage = localStorage.getItem("language");

@@ -31,11 +31,9 @@ const CategoryDetail = (): JSX.Element => {
   
 
   const categories = useCategory(id);
-  const getRestaurant = useRestaurant();
+  const getRestaurant = useRestaurant(id);
 
-  const restaurantById = getRestaurant.data?.data.find(
-    (item: ItemType) => item.id === id
-  );
+  const restaurantById = getRestaurant.data?.data
 
   const subCategories = categories.data?.data.find(
     (item: ItemType) => item.id == categoryId
