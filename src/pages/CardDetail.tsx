@@ -17,7 +17,7 @@ const CardDetail = (): JSX.Element => {
   
 
   const getRestaurant = useRestaurant(id);
-  console.log(getRestaurant.data?.data);
+  console.log(getRestaurant?.data?.data);
   
   const categories = useCategory(id);  
   console.log(categories?.data);

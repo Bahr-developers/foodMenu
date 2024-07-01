@@ -15,14 +15,14 @@ const FoodCardrow = (props: FoodCardPropsType) => {
       `}
     >
       {props.food?.image_urls.length ? (
-        <div className={`w-2/5 py-2 pl-2`}>
+        <div className={`w-[55%] py-2 pl-2`}>
           <ImgSwiper col={props.col} imgArr={props.food?.image_urls} />
         </div>
       ) : (
         <LazyLoadImage
           src={`${ImageBaseUrl}${props.restaurantImg}`}
           alt="restaurantImg"
-          className={`rounded-[10px] h-full w-1/2`}
+          className={`rounded-[10px] h-full w-[w-1/2]`}
           style={{ height: "140px" }}
         />
       )}
